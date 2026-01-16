@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(var(--primary));
+  --color-foreground: oklch(var(--foreground));
+  --color-primary-foreground: oklch(var(--primary-foreground));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+}
+
+@layer base {
+  :root {
+    --primary: 0.55 0.15 155;
+    --foreground: 0.25 0.02 230;
+    --primary-foreground: 0.98 0.005 145;
+    --muted-foreground: 0.45 0.02 230;
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
