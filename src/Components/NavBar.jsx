@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -15,10 +15,9 @@ const NavBar = () => {
       <nav>
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-              <Heart className="h-5 w-5 text-primary-foreground" />
+            <div className="flex h-10 w-30">
+              <img src="/logo.png" alt="Logo" />
             </div>
-            <span className="text-xl font-bold text-foreground">HopeRise</span>
           </Link>
 
           {/* Desktop Version*/}
